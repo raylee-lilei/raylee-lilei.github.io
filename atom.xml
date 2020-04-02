@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-03-31T04:10:49.292Z</updated>
+  <updated>2020-04-02T13:07:19.194Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OS_MemoryManagement</title>
+    <link href="/2020/04/02/OS-MemoryManagement/"/>
+    <id>/2020/04/02/OS-MemoryManagement/</id>
+    <published>2020-04-02T12:21:30.000Z</published>
+    <updated>2020-04-02T13:07:19.194Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;存储管理&quot;&gt;&lt;a href=&quot;#存储管理&quot; class=&quot;headerlink&quot; title=&quot;存储管理&quot;&gt;&lt;/a&gt;存储管理&lt;/h1&gt;&lt;h2 id=&quot;存储器功能&quot;&gt;&lt;a href=&quot;#存储器功能&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="technology" scheme="/categories/technology/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OS_FileManagement</title>
+    <link href="/2020/04/02/OS-FileManagement/"/>
+    <id>/2020/04/02/OS-FileManagement/</id>
+    <published>2020-04-02T12:20:33.000Z</published>
+    <updated>2020-04-02T13:17:37.567Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;设备管理&quot;&gt;&lt;a href=&quot;#设备管理&quot; class=&quot;headerlink&quot; title=&quot;设备管理&quot;&gt;&lt;/a&gt;设备管理&lt;/h1&gt;&lt;h2 id=&quot;主要功能&quot;&gt;&lt;a href=&quot;#主要功能&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="technology" scheme="/categories/technology/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OSPrinciple</title>
+    <link href="/2020/04/02/OSPrinciple/"/>
+    <id>/2020/04/02/OSPrinciple/</id>
+    <published>2020-04-02T07:30:09.000Z</published>
+    <updated>2020-04-02T12:50:41.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;操作系统原理分析&lt;/p&gt;
+&lt;h2 id=&quot;操作系统功能&quot;&gt;&lt;a href=&quot;#操作系统功能&quot; class=&quot;headerlink&quot; title=&quot;操作系统功能&quot;&gt;&lt;/a&gt;操作系统功能&lt;/h2&gt;&lt;h3 id=&quot;1-进程管理（CPU管理）&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="technology" scheme="/categories/technology/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>PandArray</title>
@@ -95,7 +168,7 @@ char str2[] = &amp;quot;lilei&amp;quot;;
     <link href="/2020/03/29/Test/"/>
     <id>/2020/03/29/Test/</id>
     <published>2020-03-29T06:59:14.000Z</published>
-    <updated>2020-03-29T12:32:51.539Z</updated>
+    <updated>2020-04-02T07:59:29.178Z</updated>
     
     <summary type="html">
     

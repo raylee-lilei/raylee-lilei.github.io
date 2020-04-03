@@ -389,9 +389,9 @@
 <p>1.固定地址映射（编程时直接使用物理地址或者通过编译器映射物理地址 ）<br>2.静态地址映射（程序装入时由操作系统完成逻辑到物理的过程，装入时是指：双击图标时/终端输入命令回车时）<br><strong>物理地址（MA）=逻辑地址（VA）+装入基址（BA）</strong><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/31.png" width="53%" height="40%">  </p>
 <p>MA = X + BA<br>●程序运行之前确定映射关系<br>●程序装入后不能移动<br>●程序占用连续空间</p>
 <p>3.动态地址映射<br>程序在执行过程中将逻辑转化为物理地址<br>内存占用空间可动态变化<br>程序不用占用连续的内存空间<br>便于多个进程共享代码</p>
-<h3 id="虚拟存储"><a href="#虚拟存储" class="headerlink" title="虚拟存储"></a>虚拟存储</h3><h4 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h4><pre><code>分配空间
-</code></pre><h4 id="存储保护"><a href="#存储保护" class="headerlink" title="存储保护"></a>存储保护</h4><pre><code>防止越界或者越权。采用界址寄存器，在CPU中设置一对上限寄存器和下限寄存器存储程序在内存中的上限和下限
-</code></pre><h2 id="物理内存管理"><a href="#物理内存管理" class="headerlink" title="物理内存管理"></a>物理内存管理</h2><p><strong>单一区存储</strong><br><strong>分区存储</strong><br>1.固定分区（找合适的分区运行）<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/32.png" width="53%" height="40%">  </p>
+<h3 id="虚拟存储"><a href="#虚拟存储" class="headerlink" title="虚拟存储"></a>虚拟存储</h3><h4 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h4><p>分配空间</p>
+<h4 id="存储保护"><a href="#存储保护" class="headerlink" title="存储保护"></a>存储保护</h4><p>防止越界或者越权。采用界址寄存器，在CPU中设置一对上限寄存器和下限寄存器存储程序在内存中的上限和下限</p>
+<h2 id="物理内存管理"><a href="#物理内存管理" class="headerlink" title="物理内存管理"></a>物理内存管理</h2><p><strong>单一区存储</strong><br><strong>分区存储</strong><br>1.固定分区（找合适的分区运行）<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/32.png" width="53%" height="40%">  </p>
 <p>2.动态分区（存在空间碎片）<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/33.png" width="43%" height="30%"><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/34.png" width="43%" height="30%">  </p>
 <p><strong>空闲区放置策略</strong><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/35.png" width="38%" height="25%"><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/36.png" width="43%" height="30%"><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/37.png" width="43%" height="30%">  </p>
 <p>1.分区回收（释放与现有空闲区相邻，先合并再更新空闲区，不相邻直接插入空闲区）<br>2.内存覆盖技术<br>    用较小的空间运行较大的程序<br>有常驻区和覆盖区<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@2.5/img/article/OS/38.png" width="48%" height="35%"><br>编程复杂<br>程序执行时间变长：从外存装入内存耗时</p>

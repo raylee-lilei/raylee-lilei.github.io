@@ -392,38 +392,7 @@
 
 <form action method><br><fieldset><legend font-weight:600>思路：</legend><br><div align="“Center”">搜索从前往后搜索，插入的时候从后往前插入</div><br>1.求出原始字符串大小。<br>2.求出空格数。<br>3.计算新字符串大小  blankSpaceCount*2 + originStrLen 。<br>4.定义两个指针指向原始和新字符串的末尾。<br>5.往前一次遍历：<br>&emsp;&emsp;当originStrLen指向空的时候，就开始替换，newpStr减一插入一个，减一插入一个，知道满足要求。<br>&emsp;&emsp;当originStrLen不指向空时，把原始字符串的复制给新字符串。<br>6.每操作完一次原始指针减一，往前遍历。<br></fieldset><br></form>
 
-<h2 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h2><pre><code class="bash">class Solution { 
-public: 
-    void replaceSpace(char *str,int length) {
-        //验空
-        if(str ==nullptr || length&lt;=0 ){
-            return;
-        }
-        //求出原始字符串长度
-        int blankSpaceCount = 0;
-        int originStrLen = 0;
-        //求出空格数
-       for(int i = 0;str[i]!=&#39;\0&#39;;i++){
-           originStrLen++;
-           if(str[i]==&#39; &#39;){
-               blankSpaceCount++;
-           }
-       }
-        int newStrLen = blankSpaceCount*2 + originStrLen;
-        char *originpStr = str + originStrLen;
-        char *newpStr = str + newStrLen;
-        while(originpStr &lt; newpStr){
-            if(*originpStr== &#39; &#39;){
-                *newpStr-- = &#39;0&#39;;
-                *newpStr-- = &#39;2&#39;;
-                *newpStr-- = &#39;%&#39;;
-            }else{
-                *newpStr--= *originpStr;
-            }
-            originpStr--;
-        }
-}
-};
+<h2 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h2><pre><code class="bash">sadsada
 
 </code></pre>
 

@@ -16,4 +16,30 @@
 	font-style:oblique;
     font-size: 14px;   
         }
- 
+table
+
+     {
+
+     
+
+         border-collapse :collapse ;
+
+     }
+
+     th,td
+
+     {
+
+         width:100px;
+
+         height:40px;
+
+         border :1px solid black;
+
+         font-size:12px;
+
+         text-align :center;
+
+     }
+
+     

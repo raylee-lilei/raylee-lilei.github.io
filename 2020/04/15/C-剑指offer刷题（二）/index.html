@@ -383,17 +383,38 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p><link rel="stylesheet" href="/css/teat.css"></p>
+          <p><head></head></p>
+<p><link rel="stylesheet" href="/css/teat.css"><br></p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为I am raylee.则经过替换之后的字符串为I%20am%20raylee。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*originpStr <strong>&darr;</strong></p>
-<table><tr><td>I</td><td></td><td>a</td><td>m</td><td></td><td>r</td><td>a</td><td>y</td><td>l</td><td>e</td><td>e</td><td>\0</td></tr></table>
+<table><tr><td class="test">I</td><td class="test"></td><td class="test">a</td><td class="test">m</td><td class="test"></td><td class="test">r</td><td class="test">a</td><td class="test">y</td><td class="test">l</td><td class="test">e</td><td class="test">e</td><td class="test">\0</td></tr></table>
 
 <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*newpStr <strong>&darr;</strong></p>
-<table><tr><td>I</td><td></td><td></td><td></td><td>a</td><td>m</td><td></td><td></td><td></td><td>r</td><td>a</td><td>y</td><td>l</td><td>e</td><td>e</td><td>\0</td></tr></table>
+<table><tr><td class="test">I</td><td class="test"></td><td class="test"></td><td class="test"></td><td class="test">a</td><td class="test">m</td><td class="test"></td><td class="test"></td><td class="test"></td><td class="test">r</td><td class="test">a</td><td class="test">y</td><td class="test">l</td><td class="test">e</td><td class="test">e</td><td class="test">\0</td></tr></table>
 
 <form action method><br><fieldset><legend font-weight:600>思路：</legend><br><div align="“Center”">搜索从前往后搜索，插入的时候从后往前插入</div><br>1.求出原始字符串大小。<br>2.求出空格数。<br>3.计算新字符串大小  blankSpaceCount*2 + originStrLen 。<br>4.定义两个指针指向原始和新字符串的末尾。<br>5.往前一次遍历：<br>&emsp;&emsp;当originStrLen指向空的时候，就开始替换，newpStr减一插入一个，减一插入一个，知道满足要求。<br>&emsp;&emsp;当originStrLen不指向空时，把原始字符串的复制给新字符串。<br>6.每操作完一次原始指针减一，往前遍历。<br></fieldset><br></form>
 
-<h2 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h2><pre><code class="bash">sadsada
-
+<h2 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h2><pre><code class="bash">class Solution{
+public:
+    bool Find (int target, vector&lt;vector&lt;int&gt; &gt; array){
+        //找到数组的行
+        int rows = array.size();
+        //找到数组的列
+        int cols = array[0].size();
+        //找到右上角的数的X Y坐标
+        int rowX = 0;
+        int rowY = cols-1;
+        //数组范围内查找
+        while(rowX &lt; rows &amp;&amp; 0 &lt;= rowY){
+            if(target &gt; array[rowX][rowY]){
+                rowX++;
+            }else if(target &lt; array[rowX][rowY]){
+                rowY--;
+            }else
+                return true;
+        }
+        return false;
+    }
+};
 </code></pre>
 
         </div>
@@ -423,9 +444,26 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/15/new/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                new</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2020/04/13/C-剑指offer刷题（一）/" rel="next">
               <div class="background">

@@ -16,11 +16,8 @@
 	font-style:oblique;
     font-size: 14px;   
         }
-table{
-    border-collapse :collapse ;
-     }
-th,td{
 
+.test{
     width:100px;
     height:40px;
 	border :1px solid black;

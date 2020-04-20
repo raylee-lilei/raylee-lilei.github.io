@@ -428,6 +428,83 @@ public:
  }
 };
 </code></pre>
+<h2 id="斐波那契数列的应用"><a href="#斐波那契数列的应用" class="headerlink" title="斐波那契数列的应用"></a>斐波那契数列的应用</h2><h3 id="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。"><a href="#一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。" class="headerlink" title="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。"></a>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。</h3><form action method><br><fieldset><legend font-weight:600>思路1：</legend><br><div align="“Center”">数组保存记录前面的值</div><br><br>对于第n个台阶来说，只能从n-1或者n-2的台阶跳上来，所以<br>F(n) = F(n-1) + F(n-2)<br>斐波拉契数序列，初始条件<br>n=1:只能一种方法<br>n=2:两种<br>刚好满足斐波拉契数列<br></fieldset><br></form>
+
+
+<h3 id="实现code1"><a href="#实现code1" class="headerlink" title="实现code1"></a>实现code1</h3><pre><code class="bash">class Solution {
+public:
+    int jumpFloor(int number) {
+        int temp;
+        int *Arraylist=new int[number+1];
+        Arraylist[0]=1;
+        Arraylist[1]=1;
+        for(int i=2;i&lt;=number;i++)
+        {
+            Arraylist[i]=Arraylist[i-1]+Arraylist[i-2];
+        }       
+        temp=Arraylist[number];
+        return temp;
+        delete []Arraylist;
+    }
+};
+</code></pre>
+<form action method><br><fieldset><legend font-weight:600>思路2：</legend><br><div align="“Center”">迭代法</div><br>中间的结果不需要记录<br><br>1.每次记录前一项<br>2.迭代辗转相加<br><br></fieldset><br></form>
+
+<h3 id="实现code2-2"><a href="#实现code2-2" class="headerlink" title="实现code2"></a>实现code2</h3><pre><code class="bash">class Solution {
+public:
+    int jumpFloor(int number) {
+        int i;
+        int PreItem =1;
+        int CurrentItem =1;
+        if(number&lt;=0)
+            return 0;
+        if(number==1)
+            return 1;
+        for(i=2;i&lt;=number;i++){
+            CurrentItem = PreItem+CurrentItem;
+            PreItem = CurrentItem-PreItem;
+        }
+        return CurrentItem;
+    }
+};
+
+</code></pre>
+<h3 id="变态跳台阶"><a href="#变态跳台阶" class="headerlink" title="变态跳台阶"></a>变态跳台阶</h3><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</p>
+<form action method><br><fieldset><legend font-weight:600>思路:/legend&gt;<br><div align="“Center”"></div><br><br>n = 1 1中跳法<br>n = 2 2中跳法<br>n = 3 4中跳法<br>n = 4 8中跳法<br>…<br>n = number  2 ^(number - 1)  中跳法<br><br>直接按位操作<br>m*2^n  相当于将m左移n次<br>m/2^n  相当于将m右移n次<br></legend></fieldset><br></form>
+
+<h3 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h3><pre><code class="bash">class Solution {
+public:
+    int jumpFloorII(int number) {
+        int  shift = 1;  //将要移位的数  1* 2^(n-1)
+        return 1&lt;&lt;(number - 1);
+    }
+};
+</code></pre>
+<h3 id="矩形覆盖"><a href="#矩形覆盖" class="headerlink" title="矩形覆盖"></a>矩形覆盖</h3><p>我们可以用2<em>1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2</em>1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.5/img/article/CPPoffer/juxing.png" width="60%" height="40%"></p>
+<p><form action method></form></p>
+<p><fieldset><legend font-weight:600>思路:/legend&gt;</legend></fieldset></p>
+<div align="“Center”"></div>
+
+<p>其实也是斐波拉契数列</p>
+<p><br><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.5/img/article/CPPoffer/juxingfenxi.jpg" width="60%" height="35%"></p>
+<h3 id="实现code-1"><a href="#实现code-1" class="headerlink" title="实现code"></a>实现code</h3><pre><code class="bash">class Solution {
+public:
+    int rectCover(int number) {
+        int i;
+        int PreItem =1;
+        int CurrentItem =1;
+        if(number&lt;=0)
+            return 0;
+        if(number==1)
+            return 1;
+        for(i=2;i&lt;=number;i++){
+            CurrentItem = PreItem+CurrentItem;
+            PreItem = CurrentItem-PreItem;
+        }
+        return CurrentItem;
+    }
+};
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -456,9 +533,26 @@ public:
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/20/C-剑指offer刷题（八）/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                C++剑指offer刷题（八）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2020/04/18/C-剑指offer刷题（六）/" rel="next">
               <div class="background">

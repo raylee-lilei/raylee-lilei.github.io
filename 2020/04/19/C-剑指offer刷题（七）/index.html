@@ -471,7 +471,7 @@ public:
 
 </code></pre>
 <h3 id="变态跳台阶"><a href="#变态跳台阶" class="headerlink" title="变态跳台阶"></a>变态跳台阶</h3><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</p>
-<form action method><br><fieldset><legend font-weight:600>思路:</legend><br><div align="“Center”"></div><br><br>n = 1 1中跳法<br>n = 2 2中跳法<br>n = 3 4中跳法<br>n = 4 8中跳法<br>…<br>n = number  2 ^(number - 1)  中跳法<br><br>直接按位操作<br>m*2^n  相当于将m左移n次<br>m/2^n  相当于将m右移n次<br></fieldset><br></form>
+<form action method><br><fieldset><legend font-weight:600>思路:</legend><br><div align="“Center”">位操作</div><br><br>n = 1 1中跳法<br>n = 2 2中跳法<br>n = 3 4中跳法<br>n = 4 8中跳法<br>…<br>n = number  2 ^(number - 1)  中跳法<br><br>直接按位操作<br>m*2^n  相当于将m左移n次<br>m/2^n  相当于将m右移n次<br></fieldset><br></form>
 
 <h3 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h3><pre><code class="bash">class Solution {
 public:
@@ -483,11 +483,11 @@ public:
 </code></pre>
 <h3 id="矩形覆盖"><a href="#矩形覆盖" class="headerlink" title="矩形覆盖"></a>矩形覆盖</h3><p>我们可以用2<em>1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2</em>1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.5/img/article/CPPoffer/juxing.png" width="60%" height="40%"></p>
 <p><form action method></form></p>
-<p><fieldset><legend font-weight:600>思路:/legend&gt;</legend></fieldset></p>
+<p><fieldset><legend font-weight:600>思路:</legend></fieldset></p>
 <div align="“Center”"></div>
 
 <p>其实也是斐波拉契数列</p>
-<p><br><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.5/img/article/CPPoffer/juxingfenxi.jpg" width="60%" height="35%"></p>
+<p><br><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.5/img/article/CPPoffer/juxingfenxi.jpg" width="60%" height="25%"></p>
 <h3 id="实现code-1"><a href="#实现code-1" class="headerlink" title="实现code"></a>实现code</h3><pre><code class="bash">class Solution {
 public:
     int rectCover(int number) {

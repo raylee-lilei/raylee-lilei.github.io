@@ -383,21 +383,16 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。保证base和exponent不同时为0</p>
+          <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。保证base和exponent不同时为0。</p>
 <hr>
 <p>n为奇数时, n&amp;1为1<br>n为偶数时, n&amp;1为0<br>n&amp;1等效于  n%2==1</p>
 <p>“n&gt;&gt; 1”与操作与”n/2”</p>
 <ol>
-<li><blockquote>
-<blockquote>
-<p>是右移符号，它在操作时只允copy许整数<br>/是除法，它可以操作不同类型的数据(int  float)</p>
-</blockquote>
-</blockquote>
-</li>
+<li>. &gt;&gt;是右移符号，它在操作时只允copy许整数<br>. /是除法，它可以操作不同类型的数据(int  float)</li>
 <li>右移操作通常情况下，会比整数除法速度快</li>
 <li>右移运算的优先级比除法低，先计算乘除，后计算左移或右移</li>
 </ol>
-<form action method><br><fieldset><legend font-weight:600>思路:</legend><br><div align="“Center”">指数计算</div><br><br>1. 先判断base==0 exponent &gt; 0 结果为0     否则错误<br>2. 判断base！=0  exponent &gt; 0 计算公式计算 exponent = 0  计算结果为1    exponent &lt; 0  去倒数<br>3. 计算公式<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.7/img/article/CPPoffer/zhishujisuan.png" width="70%" height="35%"><br></fieldset><br></form>
+<form action method><br><fieldset><legend font-weight:600>思路:</legend><br><div align="“Center”">指数计算</div><br><br>1. 先判断base==0  exponent &gt; 0   结果为0       否则错误<br>2. 判断base！=0   exponent &gt; 0   计算公式计算   exponent = 0  计算结果为1     exponent &lt; 0   去倒数<br>3. 计算公式<br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@3.7/img/article/CPPoffer/zhishujisuan.png" width="70%" height="35%"><br></fieldset><br></form>
 
 <h2 id="实现code"><a href="#实现code" class="headerlink" title="实现code"></a>实现code</h2><pre><code class="bash">class Solution {
 public:
@@ -417,10 +412,10 @@ public:
     double PerformOperation(double base,int exponent){
         if(exponent == 1){return base;}
         if((exponent &amp; 1) ==0){
-            int Temp_Even = PerformOperation(base,exponent &gt;&gt; 1);
+            double Temp_Even = PerformOperation(base,exponent &gt;&gt; 1);
             return Temp_Even*Temp_Even;
         }else{
-            int Temp_Odd = PerformOperation(base,(exponent - 1) &gt;&gt; 1);
+            double Temp_Odd = PerformOperation(base,(exponent - 1) &gt;&gt; 1);
             return Temp_Odd*Temp_Odd*base;
         }
     }

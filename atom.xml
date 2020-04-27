@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-04-26T03:17:43.701Z</updated>
+  <updated>2020-04-27T03:25:20.091Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++剑指offer刷题（十五）</title>
+    <link href="/2020/04/27/C-%E5%89%91%E6%8C%87offer%E5%88%B7%E9%A2%98%EF%BC%88%E5%8D%81%E4%BA%94%EF%BC%89/"/>
+    <id>/2020/04/27/C-剑指offer刷题（十五）/</id>
+    <published>2020-04-27T03:20:20.000Z</published>
+    <updated>2020-04-27T03:25:20.091Z</updated>
+    
+    <summary type="html">
+    
+      矩阵顺时针旋转输出
+    
+    </summary>
+    
+      <category term="technology" scheme="/categories/technology/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C++剑指offer刷题（十四）</title>
@@ -373,31 +391,6 @@
         
           &lt;p&gt;操作系统原理分析&lt;/p&gt;
 &lt;h2 id=&quot;操作系统功能&quot;&gt;&lt;a href=&quot;#操作系统功能&quot; class=&quot;headerlink&quot; title=&quot;操作系统功能&quot;&gt;&lt;/a&gt;操作系统功能&lt;/h2&gt;&lt;h3 id=&quot;1-进程管理（CPU管理）&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="technology" scheme="/categories/technology/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PandArray</title>
-    <link href="/2020/03/31/PandArray/"/>
-    <id>/2020/03/31/PandArray/</id>
-    <published>2020-03-31T03:46:55.000Z</published>
-    <updated>2020-03-31T04:10:49.292Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;char *str1 = &amp;quot;lilei&amp;quot;;       //(1)
-char str2[] = &amp;quot;lilei&amp;quot;;     
         
       
     

@@ -384,7 +384,7 @@
         
         <div class="entry-content">
           <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。<br>注意：保证测试中不会当栈为空的时候，对栈调用pop()或者min()或者top()方法。</p>
-<form action method><br><fieldset><legend font-weight:600>思路：</legend><br><div align="“Center”">借助一个辅助栈找min</div><br>1. 对操作栈压栈，辅助栈压入一个值<br>2. 比较压入栈的值与栈顶元素的大小；如果小就压栈，否则不压栈<br>3. 如果辅助栈的值与操作栈的值相等辅助栈出栈<br>4. 操作栈出栈<br>5. 返回操作栈栈顶元素<br>6. 返回辅助栈栈顶元素就是最小值<br><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@4.3/img/article/CPPoffer/stackMin.png" width="70%" height="70%"><br><br></fieldset><br></form>
+<form action method><br><fieldset><legend font-weight:600>思路：</legend><br><div align="“Center”">借助一个辅助栈找min</div><br>1. 对操作栈压栈，辅助栈压入一个值<br>2. 比较压入栈的值与栈顶元素的大小；如果小就压栈，否则不压栈<br>3. 如果辅助栈的值与操作栈的值相等辅助栈出栈<br>4. 操作栈出栈<br>5. 返回操作栈栈顶元素<br>6. 返回辅助栈栈顶元素就是最小值<br><br><img src="https://cdn.jsdelivr.net/gh/raylee-lilei/cdn@4.3/img/article/CPPoffer/stackMin.png" width="100%" height="100%"><br><br></fieldset><br></form>
 
 
 <h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><pre><code class="bash">class Solution {
